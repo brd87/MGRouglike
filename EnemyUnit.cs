@@ -9,15 +9,11 @@ namespace MGrouglike
 {
     internal class EnemyUnit : UnitBase
     {
-        Abilities AbilitieList;
-        public EnemyUnit(Abilities abilitieList, int id, int hp, int speed, int sRow, int sCol, int lRow, int lCol, int gRow, int gCol) : base(id, hp, speed, sRow, sCol, lRow, lCol, gRow, gCol)
-        {
-            Abilities AbilitieList = abilitieList;
-        }
+        public int[] RangeAoe = new int[2];
+        public int[] ModeValueFaction = new int[3];
 
-        public void UseAbilitie()
+        public EnemyUnit(int id, int hp, int speed, int sRow, int sCol, int lRow, int lCol, int gRow, int gCol) : base(id, hp, speed, sRow, sCol, lRow, lCol, gRow, gCol)
         {
-
         }
 
         public override void Move(Vector2 location)
